@@ -4,10 +4,134 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'DM Mono', monospace;
-  color: rgb(31 41 55);
-  background-color: rgb(241 245 249);
+  color: rgb(203 213 225);
 }
 
-* {
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: rgb(15 23 42);
+  background-image: linear-gradient(115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)),
+    url(img/aincrad.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+header {
+  margin: 2em auto;
+  color: rgb(241 245 249);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+header h1 {
+  line-height: 0.8;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 3em auto;
+  padding: .5em 1.125em;
+  border-radius: .25em;
+  border: 1px solid rgb(51 65 85);
+  background-color: rgba(30, 41, 59, .75);
+
+}
+
+@media (min-width: 576px) {
+  form {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  form {
+    max-width: 720px;
+  }
+}
+
+fieldset {
+  border: none;
+  margin: 1.125em 0.5em;
+  padding: 0 0.25rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  padding: 0.25em 0;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0.5em 0 0.125em 0;
+}
+
+button {
+  border: none;
+}
+
+.required-input {
+  color: red;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  margin: 0.125em 0 1em;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.125rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input-checkbox,
+.input-radio {
+  display: inline-block;
+  margin-right: 0.625rem;
+}
+
+.input-textarea {
+  resize: vertical;
+  width: 100%;
+  min-height: 80px;
+  padding: 0.625rem;
+}
+
+.submit-button {
+  background-color: rgb(203 213 225);
+  padding: .625em;
+  margin: 1em 0.5em 1.5em;
+  border-radius: inherit;
+  border: none;
+  color: rgb(30, 41, 59);
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.submit-button:hover {
+  opacity: .75;
 }
