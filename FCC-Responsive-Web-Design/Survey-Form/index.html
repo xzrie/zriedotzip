@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beta Test Survey Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <h1 id="title">SWORD ART ONLINE BETA TEST SURVEY FORM</h1>
+    <p id="description">
+      Help us to improve SAO for better game experience<br />
+    </p>
+  </header>
+
+  <form id="survey-form">
+    <!-- * Personal Information -->
+    <fieldset class="form-group">
+      <!-- Name -->
+      <label for="name" id="name-label">
+        Name<sup class="required-input">*</sup>
+      </label>
+      <input type="text" name="name" id="name" class="form-control"
+        placeholder="Kazuto Kirigaya" required />
+
+      <!-- Email -->
+      <label for="email" id="email-label">
+        Email<sup class="required-input">*</sup>
+      </label>
+      <input type="email" name="email" id="email" class="form-control"
+        placeholder="kazutokirigaya@mail.com" required />
+
+      <!-- Gender -->
+      <div>
+        <label>Gender</label>
+        <label>
+          <input type="radio" name="user-gender" value="male"
+            class="input-radio" />
+          Male
+        </label>
+
+        <label>
+          <input type="radio" name="user-gender" value="female"
+            class="input-radio" />
+          Female
+        </label>
+
+        <label>
+          <input type="radio" name="user-gender" value="other"
+            class="input-radio" />
+          Other
+        </label>
+      </div>
+
+      <!-- Age -->
+      <label for="age" id="number-label">
+        Age
+      </label>
+      <input type="number" name="age" id="number" class="form-control" min="15"
+        max="42" placeholder="insert your age..." />
+
+      <!-- Game ID -->
+      <label for="game-id">
+        Game ID<sup class="required-input">*</sup>
+      </label>
+      <input type="text" name="game-id" id="game-id" class="form-control"
+        placeholder="ABC-12345" required />
+    </fieldset>
+
+    <!-- Game Information -->
+    <fieldset class="form-group">
+      <!-- Role -->
+      <label for="role-game">Role in Game:</label>
+      <select name="role-game" id="dropdown" class="form-control">
+        <option value disabled selected>Choose your role</option>
+        <option value="warrior">Warrior</option>
+        <option value="archer">Archer</option>
+        <option value="tank">Tank</option>
+        <option value="mage">Mage</option>
+      </select>
+
+      <!-- Stage -->
+      <label for="stage-game">Last Stage Passed:</label>
+      <input type="number" name="stage-game" id="stage-game"
+        class="form-control" min="1" max="100"
+        placeholder="insert between 1-100" />
+    </fieldset>
+
+
+
+    <!-- Feedback / Marketing  -->
+    <fieldset class="form-group">
+      <!-- User Info -->
+      <div class="input-group">
+        <label for="user-info">How Do You Know This Game?</label>
+        <label>
+          <input type="checkbox" name="user-info" id="facebook"
+            class="input-checkbox" value="facebook" />
+          Facebook
+        </label>
+
+        <label>
+          <input type="checkbox" name="user-info" id="twitter"
+            class="input-checkbox" value="twitter" />
+          Twitter
+        </label>
+        <label>
+          <input type="checkbox" name="user-info" id="reddit"
+            class="input-checkbox" value="reddit" />
+          Reddit
+        </label>
+        <label>
+          <input type="checkbox" name="community" id="community"
+            class="input-checkbox" value="community" />
+          Discord/Community
+        </label>
+        <label>
+          <input type="checkbox" name="user-info" id="website"
+            class="input-checkbox" value="website" />
+          Official Website
+        </label>
+      </div>
+
+      <!-- Feedback -->
+      <div class="input-group">
+        <label for="Feedback">Feedback</label>
+        <textarea name="feedback" id="feedback" class="input-textarea"
+          placeholder="Tell me your feedback..."></textarea>
+      </div>
+    </fieldset>
+
+    <input type="submit" value="Submit" id="submit" class="submit-button" />
+  </form>
+
+  <!-- Script from FreeCodeCamp.org for test/check task -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+  </script>
+</body>
+
+</html>
